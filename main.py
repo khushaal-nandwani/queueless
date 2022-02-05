@@ -1,20 +1,21 @@
 import RestaurantCaller
+import UserEnd
 
 
 def run():
     print("Welcome to Track my Seat\n")
     option = int(input("Start Search (1) or Log In as a Business (2):"))
 
-    # User
+    # User End
     if option == 1:
-        print("Please enter the locality")
+        UserEnd.start_user_end()
 
     # Restaurant Owner
     else:
         name = input("Name:")
-        valid = True
+        valid = True    # TODO: validate from API
         if valid:
-            correct_password = "haha"   # TODO: get this from database
+            correct_password = "haha"   # TODO: get this from database/Api
             password = input("Password:")
             if correct_password == password:
                 RestaurantCaller.getRestaurant(name)
