@@ -12,7 +12,7 @@ def run():
 
     # Restaurant Owner
     else:
-        name = input("Name:")
+        username = input("Username:")
         valid = True    # TODO: validate from API
         if valid:
             correct_password = "haha"   # TODO: get this from database/Api
