@@ -1,5 +1,22 @@
 import RestaurantCaller
 import UserEnd
+from Restaurant import Restaurant
+
+
+def run_restaurant(rest: Restaurant):
+    menu = "1. Occupy Table \n" \
+           "2. Vacate Table \n" \
+           "3. Add Table \n" \
+           "4. Remove Table\n"
+    menu_no = int(input(menu))
+    occupancy = int(input("Specify the table size"))
+    rest_functions = [rest.add_table, rest.occupy_table, rest.remove_table, rest.vacate_table]
+    rest_functions[menu_no + 1]()
+    rest_returns = ["Table Occupied Successfully", "Table vacated",
+                    "New Table has been added", "Table has been removed"]
+
+    print(rest_returns, '\n')
+
 
 
 def run():
@@ -18,7 +35,9 @@ def run():
             correct_password = "haha"   # TODO: get this from database/Api
             password = input("Password:")
             if correct_password == password:
-                RestaurantCaller.getRestaurant(name)
+                created_restaurant = RestaurantCaller.getRestaurant(name)
+                run_restaurant(created_restaurant)
+
             else:
                 RestaurantCaller.createRestaurant()
 

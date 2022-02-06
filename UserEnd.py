@@ -43,7 +43,7 @@ def handle_localities():
 
     restaurant_no = int(input("Select the restaurant number: "))
     selected_restaurant = restaurants[restaurant_no]
-   d_ show_restaurant_status(selecterestaurant)
+    show_restaurant_status(selected_restaurant)
 
 
 

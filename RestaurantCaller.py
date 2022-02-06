@@ -10,24 +10,15 @@ def createRestaurant():
     tables_of_size_2 = int(input("How many tables do you "
                              "have which could accommodate 2 people?"))
     # TODO: update database
+    getRestaurant(input_name)
 
 
-    # TODO: add those tables to the restaurant object below
-    restaurant = Restaurant(input_name, )
-    # TODO: update the restaurant to the database
-
-
-def getRestaurant(name: str):
+def getRestaurant(name: str) -> Restaurant:
     #  name, table4count, table2count
     # TODO: get restaurant details from the database and initialize a new
     #  restaurant
-
-    # arr1 = [
-    # [capacity, taken, total_tables]
-    #   [4, x, y]
-    #   [2, a, z]
-    # ]
-    pass
+    # restaurant_details = {name: ,tables_of_4, tables_of_2}
+    return Restaurant(name, tables_of_4, tables_of_2)
 
 
 

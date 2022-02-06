@@ -1,6 +1,8 @@
 from Table import Table
 
 
+# TODO: connect every function in Restaruant to Database updation
+
 class Restaurant:
     name: str
 
@@ -19,10 +21,8 @@ class Restaurant:
 
         if table.size == 2:
             self.table2s += table
-            # TODO: update
         elif table.size == 4:
             self.table4s += table
-            # TODO: update
         else:
             print("Please enter a valid table i.e. of size 2 or 4")
 
@@ -34,7 +34,6 @@ class Restaurant:
             for table in self.table2s:
                 if table.occupied is False:
                     table.occupied = True
-                    # TODO: update
                     return
 
             print("All tables are already occupied")
@@ -44,7 +43,6 @@ class Restaurant:
             for table in self.table4s:
                 if table.occupied is False:
                     table.occupied = True
-                    # TODO: update
                     return
             print("All tables are already occupied")
             return
